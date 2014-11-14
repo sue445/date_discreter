@@ -1,0 +1,23 @@
+language: ruby
+rvm:
+  - 1.9
+  - 2.0
+  - 2.1
+  - 2.2
+  - ruby-head
+bundler_args: --jobs=2
+before_script:
+#  - export CODECLIMATE_REPO_TOKEN=
+script:
+  - bundle exec rspec
+  - bundle exec rubydoctest README.md
+branches:
+  only:
+    - master
+notifications:
+  email: false
+matrix:
+  allow_failures:
+    - rvm: 2.2
+    - rvm: ruby-head
+
