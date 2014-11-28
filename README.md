@@ -80,3 +80,7 @@ Or install it yourself as:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sue445/date_discreter/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
