@@ -7,6 +7,10 @@ Check discrete of months, days and hours
 [![Code Climate](https://codeclimate.com/github/sue445/date_discreter/badges/gpa.svg)](https://codeclimate.com/github/sue445/date_discreter)
 [![Coverage Status](https://img.shields.io/coveralls/sue445/date_discreter.svg)](https://coveralls.io/r/sue445/date_discreter)
 
+## Requirements
+
+* ruby 1.9+
+
 ## Installation
 
 Add this line to your application's Gemfile:
