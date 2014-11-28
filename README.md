@@ -2,6 +2,7 @@
 
 Check discrete of months, days and hours
 
+[![Build Status](https://travis-ci.org/sue445/date_discreter.svg?branch=master)](https://travis-ci.org/sue445/date_discreter)
 [![Dependency Status](https://gemnasium.com/sue445/date_discreter.svg)](https://gemnasium.com/sue445/date_discreter)
 [![Code Climate](https://codeclimate.com/github/sue445/date_discreter/badges/gpa.svg)](https://codeclimate.com/github/sue445/date_discreter)
 [![Coverage Status](https://img.shields.io/coveralls/sue445/date_discreter.svg)](https://coveralls.io/r/sue445/date_discreter)
