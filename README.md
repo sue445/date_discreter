@@ -2,6 +2,8 @@
 
 Check discrete of months, days and hours
 
+[![Dependency Status](https://gemnasium.com/sue445/date_discreter.svg)](https://gemnasium.com/sue445/date_discreter)
+
 ## Installation
 
 Add this line to your application's Gemfile:
