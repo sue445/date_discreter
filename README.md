@@ -3,6 +3,7 @@
 Check discrete of months, days and hours
 
 [![Dependency Status](https://gemnasium.com/sue445/date_discreter.svg)](https://gemnasium.com/sue445/date_discreter)
+[![Code Climate](https://codeclimate.com/github/sue445/date_discreter/badges/gpa.svg)](https://codeclimate.com/github/sue445/date_discreter)
 
 ## Installation
 
