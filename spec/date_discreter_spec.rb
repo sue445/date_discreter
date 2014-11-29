@@ -60,15 +60,31 @@ describe DateDiscreter do
     subject{ DateDiscreter.discrete_months(months) }
 
     context "with continuous" do
-      let(:months){ continuous_months }
+      context "with time array" do
+        let(:months){ continuous_months }
 
-      it{ should eq [] }
+        it{ should eq [] }
+      end
+
+      context "with date array" do
+        let(:months){ continuous_months.map(&:to_date) }
+
+        it{ should eq [] }
+      end
     end
 
     context "without continuous" do
-      let(:months){ discrete_months }
+      context "with time array" do
+        let(:months){ discrete_months }
 
-      it{ should eq [to_time("2013-11-01 00:00:00")] }
+        it{ should eq [to_time("2013-11-01 00:00:00")] }
+      end
+
+      context "with date array" do
+        let(:months){ discrete_months.map(&:to_date) }
+
+        it{ should eq [to_date("2013-11-01")] }
+      end
     end
   end
 
@@ -76,15 +92,31 @@ describe DateDiscreter do
     subject{ DateDiscreter.discrete_days(days) }
 
     context "with continuous" do
-      let(:days){ continuous_days }
+      context "with time array" do
+        let(:days){ continuous_days }
 
-      it{ should eq [] }
+        it{ should eq [] }
+      end
+
+      context "with date array" do
+        let(:days){ continuous_days.map(&:to_date) }
+
+        it{ should eq [] }
+      end
     end
 
     context "without continuous" do
-      let(:days){ discrete_days }
+      context "with time array" do
+        let(:days){ discrete_days }
 
-      it{ should eq [to_time("2013-10-03 00:00:00")] }
+        it{ should eq [to_time("2013-10-03 00:00:00")] }
+      end
+
+      context "with date array" do
+        let(:days){ discrete_days.map(&:to_date) }
+
+        it{ should eq [to_date("2013-10-03")] }
+      end
     end
   end
 

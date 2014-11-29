@@ -113,3 +113,6 @@ def to_time(str)
   Time.zone.parse(str)
 end
 
+def to_date(str)
+  Date.parse(str)
+end
