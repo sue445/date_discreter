@@ -10,7 +10,7 @@ module DateDiscreter
   def discrete_months(months)
     res = []
     months.sort.each_cons(2) do |this_month, next_month|
-      res << this_month.next_month unless this_month.next_month == next_month
+      res << this_month + 1.month unless this_month + 1.month == next_month
     end
     res
   end
