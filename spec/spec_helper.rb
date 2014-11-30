@@ -1,12 +1,14 @@
-require 'simplecov'
-require 'coveralls'
-require 'codeclimate-test-reporter'
+if ENV["COVERAGE"]
+  require 'simplecov'
+  require 'coveralls'
+  require 'codeclimate-test-reporter'
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  CodeClimate::TestReporter::Formatter,
-  Coveralls::SimpleCov::Formatter
-]
-SimpleCov.start
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+    CodeClimate::TestReporter::Formatter,
+    Coveralls::SimpleCov::Formatter
+  ]
+  SimpleCov.start
+end
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require "date_discreter"

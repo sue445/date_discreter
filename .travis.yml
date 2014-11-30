@@ -6,9 +6,9 @@ rvm:
 - 2.2
 - ruby-head
 bundler_args: "--jobs=2"
-before_script: 
+before_script:
 script:
-- bundle exec rspec
+- COVERAGE=true bundle exec rspec
 - bundle exec rubydoctest README.md
 branches:
   only:
