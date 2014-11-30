@@ -8,34 +8,31 @@ module DateDiscreter
   # @param months [Array<Date,Time>]
   # @return [Array<Date>] if arg is continuous return empty array.
   def discrete_months(months)
-    res = []
-    months.sort.each_cons(2) do |this_month, next_month|
-      res << this_month + 1.month unless this_month + 1.month == next_month
-    end
-    res
+    discrete_times(months, 1.month)
   end
 
   # return discrete of arg days
   # @param dates [Array<Date,Time>]
   # @return [Array<Date>] if arg is continuous return empty array.
   def discrete_days(dates)
-    res = []
-    dates.sort.each_cons(2) do |this_date, next_date|
-      res << this_date + 1.day unless this_date + 1.day == next_date
-    end
-    res
+    discrete_times(dates, 1.day)
   end
 
   # return discrete of arg hours
   # @param hours [Array<Time>]
   # @return [Array<Time>] if arg is continuous return empty array.
   def discrete_hours(hours)
+    discrete_times(hours, 1.hour)
+  end
+
+  def discrete_times(target_times, degree)
     res = []
-    hours.sort.each_cons(2) do |this_hour, next_hour|
-      res << this_hour + 1.hour unless this_hour + 1.hour == next_hour
+    target_times.sort.each_cons(2) do |this_time, next_time|
+      res << this_time + degree unless this_time + degree == next_time
     end
     res
   end
+  private_class_method :discrete_times
 
   # whether arg months are continuous
   # @param months [Array<Date>]
