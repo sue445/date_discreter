@@ -103,14 +103,10 @@ RSpec.configure do |config|
 =end
 
   config.order = :random
-
-  config.before(:suite) do
-    Time.zone = "Tokyo"
-  end
 end
 
 def to_time(str)
-  Time.zone.parse(str)
+  Time.parse(str)
 end
 
 def to_date(str)
