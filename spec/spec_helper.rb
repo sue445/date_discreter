@@ -1,12 +1,14 @@
-require 'simplecov'
-require 'coveralls'
-require 'codeclimate-test-reporter'
+if ENV["COVERAGE"]
+  require 'simplecov'
+  require 'coveralls'
+  require 'codeclimate-test-reporter'
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  CodeClimate::TestReporter::Formatter,
-  Coveralls::SimpleCov::Formatter
-]
-SimpleCov.start
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+    CodeClimate::TestReporter::Formatter,
+    Coveralls::SimpleCov::Formatter
+  ]
+  SimpleCov.start
+end
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require "date_discreter"
@@ -103,14 +105,10 @@ RSpec.configure do |config|
 =end
 
   config.order = :random
-
-  config.before(:suite) do
-    Time.zone = "Tokyo"
-  end
 end
 
 def to_time(str)
-  Time.zone.parse(str)
+  Time.parse(str)
 end
 
 def to_date(str)

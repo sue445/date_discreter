@@ -5,7 +5,7 @@ module DateDiscreter
   module_function
 
   # return discrete of arg months
-  # @param months [Array<Date>]
+  # @param months [Array<Date,Time>]
   # @return [Array<Date>] if arg is continuous return empty array.
   def discrete_months(months)
     res = []
@@ -16,7 +16,7 @@ module DateDiscreter
   end
 
   # return discrete of arg days
-  # @param dates [Array<Date>]
+  # @param dates [Array<Date,Time>]
   # @return [Array<Date>] if arg is continuous return empty array.
   def discrete_days(dates)
     res = []
