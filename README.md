@@ -2,6 +2,7 @@
 
 Check discrete of months, days and hours
 
+[![Gem Version](https://badge.fury.io/rb/date_discreter.svg)](http://badge.fury.io/rb/date_discreter)
 [![Build Status](https://travis-ci.org/sue445/date_discreter.svg?branch=master)](https://travis-ci.org/sue445/date_discreter)
 [![Dependency Status](https://gemnasium.com/sue445/date_discreter.svg)](https://gemnasium.com/sue445/date_discreter)
 [![Code Climate](https://codeclimate.com/github/sue445/date_discreter/badges/gpa.svg)](https://codeclimate.com/github/sue445/date_discreter)
