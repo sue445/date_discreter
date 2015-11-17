@@ -26,11 +26,15 @@ module DateDiscreter
   end
 
   def discrete_times(target_times, degree)
-    res = []
-    target_times.sort.each_cons(2) do |this_time, next_time|
-      res << this_time + degree unless this_time + degree == next_time
+    raise ArgumentError, "specify at least 2 elems" if target_times.length < 2
+    sorted = target_times.sort
+    cursor, range_upper = sorted[0], sorted[-1]
+    filledup = []
+    while (cursor < range_upper)
+      filledup << cursor
+      cursor += degree
     end
-    res
+    filledup - target_times
   end
   private_class_method :discrete_times
 
