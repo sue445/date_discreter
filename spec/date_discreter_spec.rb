@@ -56,6 +56,14 @@ describe DateDiscreter do
     ]
   end
 
+  let(:discrete_hours_2lacks) do
+    [
+      to_time("2013-10-01 00:00:00"),
+      to_time("2013-10-01 01:00:00"),
+      to_time("2013-10-01 04:00:00"),
+    ]
+  end
+
   describe "#discrete_months" do
     subject{ DateDiscreter.discrete_months(months) }
 
@@ -133,6 +141,12 @@ describe DateDiscreter do
       let(:hours){ discrete_hours }
 
       it{ should eq [to_time("2013-10-01 03:00:00")] }
+    end
+
+    context "consecutive lacks" do
+      let(:hours){ discrete_hours_2lacks }
+
+      it{ should eq [to_time("2013-10-01 02:00:00"), to_time("2013-10-01 03:00:00")] }
     end
   end
 
