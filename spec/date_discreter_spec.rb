@@ -1,4 +1,10 @@
 describe DateDiscreter do
+  let(:single_months) do
+    [
+      to_time("2013-10-01 00:00:00"),
+    ]
+  end
+
   let(:continuous_months) do
     [
       to_time("2013-10-01 00:00:00"),
@@ -18,6 +24,12 @@ describe DateDiscreter do
     ]
   end
 
+  let(:single_days) do
+    [
+      to_time("2013-10-02 00:00:00"),
+    ]
+  end
+
   let(:continuous_days) do
     [
       to_time("2013-10-01 00:00:00"),
@@ -34,6 +46,12 @@ describe DateDiscreter do
       to_time("2013-10-02 00:00:00"),
       to_time("2013-10-04 00:00:00"),
       to_time("2013-10-05 00:00:00"),
+    ]
+  end
+
+  let(:single_hours) do
+    [
+      to_time("2013-10-02 01:00:00"),
     ]
   end
 
@@ -94,6 +112,26 @@ describe DateDiscreter do
         it{ should eq [to_date("2013-11-01")] }
       end
     end
+
+    context "with empty" do
+      let(:months){ [] }
+
+      it{ should eq [] }
+    end
+
+    context "with 1 element" do
+      context "with time array" do
+        let(:months){ single_months }
+
+        it{ should eq [] }
+      end
+
+      context "with date array" do
+        let(:months){ single_months.map(&:to_date) }
+
+        it{ should eq [] }
+      end
+    end
   end
 
   describe "#discrete_days" do
@@ -126,6 +164,26 @@ describe DateDiscreter do
         it{ should eq [to_date("2013-10-03")] }
       end
     end
+
+    context "with empty" do
+      let(:days){ [] }
+
+      it{ should eq [] }
+    end
+
+    context "with 1 element" do
+      context "with time array" do
+        let(:days){ single_days }
+
+        it{ should eq [] }
+      end
+
+      context "with date array" do
+        let(:days){ single_days.map(&:to_date) }
+
+        it{ should eq [] }
+      end
+    end
   end
 
   describe "#discrete_hours" do
@@ -147,6 +205,26 @@ describe DateDiscreter do
       let(:hours){ discrete_hours_2lacks }
 
       it{ should eq [to_time("2013-10-01 02:00:00"), to_time("2013-10-01 03:00:00")] }
+    end
+
+    context "with empty" do
+      let(:hours){ [] }
+
+      it{ should eq [] }
+    end
+
+    context "with 1 element" do
+      context "with time array" do
+        let(:hours){ single_hours }
+
+        it{ should eq [] }
+      end
+
+      context "with date array" do
+        let(:hours){ single_hours.map(&:to_date) }
+
+        it{ should eq [] }
+      end
     end
   end
 

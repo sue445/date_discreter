@@ -26,7 +26,8 @@ module DateDiscreter
   end
 
   def discrete_times(target_times, degree)
-    raise ArgumentError, "specify at least 2 elems" if target_times.length < 2
+    return [] if target_times.length < 2
+
     sorted = target_times.sort
     cursor, range_upper = sorted[0], sorted[-1]
     filledup = []
