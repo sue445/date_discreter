@@ -1,5 +1,11 @@
 ## master
-[full changelog](https://github.com/sue445/date_discreter/compare/v0.0.2...master)
+[full changelog](https://github.com/sue445/date_discreter/compare/v0.0.3...master)
+
+## 0.0.2 (2015/11/17)
+[full changelog](https://github.com/sue445/date_discreter/compare/v0.0.2...v0.0.3)
+
+* Don't raise when target_times less than 2 counts
+  * https://github.com/sue445/date_discreter/pull/9
 
 ## 0.0.2 (2015/11/17)
 [full changelog](https://github.com/sue445/date_discreter/compare/v0.0.1...v0.0.2)
