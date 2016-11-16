@@ -1,9 +1,9 @@
 language: ruby
 rvm:
-- 1.9
 - 2.0
 - 2.1
 - 2.2
+- 2.3.1
 - ruby-head
 cache: bundler
 bundler_args: "--jobs=2"
@@ -12,6 +12,7 @@ before_script:
 - export COVERAGE=true
 script:
 - bundle exec rspec
+- bundle exec codeclimate-test-reporter
 - bundle exec rubydoctest README.md
 branches:
   only:
