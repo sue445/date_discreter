@@ -9,7 +9,7 @@ Check discrete of months, days and hours
 
 ## Requirements
 
-* ruby 1.9+
+* ruby 2.0+
 
 ## Installation
 
@@ -87,4 +87,3 @@ Or install it yourself as:
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sue445/date_discreter/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
