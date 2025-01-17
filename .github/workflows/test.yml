@@ -60,6 +60,7 @@ jobs:
 
       - run: bundle exec rspec
       - run: bundle exec rake rubydoctest
+        if: matrix.ruby >= '2.7'
 
       - name: Teardown Code Climate Test Reporter
         uses: aktions/codeclimate-test-reporter@v1
