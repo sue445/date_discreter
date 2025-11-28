@@ -1,5 +1,11 @@
 ## master
-[full changelog](https://github.com/sue445/date_discreter/compare/v0.0.4...master)
+[full changelog](https://github.com/sue445/date_discreter/compare/v0.0.5...master)
+
+## [0.0.5](https://github.com/sue445/rubicure/date_discreter/tag/v0.0.5) (2025/11/29)
+[full changelog](https://github.com/sue445/date_discreter/compare/v0.0.4...v0.0.5)
+
+* Release gem from GitHub Actions
+  * https://github.com/sue445/date_discreter/pull/69
 
 ## 0.0.4 (2021/11/19)
 [full changelog](https://github.com/sue445/date_discreter/compare/v0.0.3...v0.0.4)
