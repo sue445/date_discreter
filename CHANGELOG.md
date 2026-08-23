@@ -1,5 +1,11 @@
 ## master
-[full changelog](https://github.com/sue445/date_discreter/compare/v0.0.5...master)
+[full changelog](https://github.com/sue445/date_discreter/compare/v0.0.6...master)
+
+## [0.0.6](https://github.com/sue445/rubicure/date_discreter/tag/v0.0.6) (2026/08/23)
+[full changelog](https://github.com/sue445/date_discreter/compare/v0.0.5...v0.0.6)
+
+* Migrate release_gem workflow to sue445/workflows (Also testing the gem release)
+  * https://github.com/sue445/date_discreter/pull/108
 
 ## [0.0.5](https://github.com/sue445/rubicure/date_discreter/tag/v0.0.5) (2025/11/29)
 [full changelog](https://github.com/sue445/date_discreter/compare/v0.0.4...v0.0.5)
